@@ -1,0 +1,74 @@
+<html>
+
+<head>
+  <title>Gesture Web App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <center>
+      <h2 class="btn btn-warning heading">Gesture Web App
+        <br>
+        <span>&#9994;</span>
+        <span>&#9995;</span>
+        <span>&#9996;</span>
+        <span>&#128070;</span>
+        <span>&#128076;</span>
+        <span>&#128077;</span>
+      </h2>
+
+
+      <p style="font-size: 30px; font-family: 'Dongle', sans-serif;">Take a photo of a gesture to know its meaning</p>
+      <p style="font-size: 25px; font-family: 'Dongle', sans-serif;">The model is trained on the following gestures-</p>
+
+      <center>
+        <span>✌|</span>
+        <span>👍|</span>
+        <span>👌</span>
+      </center>
+      <br>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Webcam View-</label>
+        <div id="camera"></div>
+        <br><br>
+        <button onclick="take_snapshot();" class="btn btn-warning">Capture Image</button>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Prediction 1 -</label>
+        <p class="emotion_name" id="result_emotion_name"></p>
+        <p class="emoji" id="update_emoji"></p>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Snapshot - </label>
+        <div id="result"></div>
+        <br><br>
+        <button onclick="check();" class="btn btn-success">Predict Emotion</button>
+      </div>
+
+    </center>
+
+  </div>
+  <div class="copy_right_footer">
+    Developed by - Valentina Salinas
+  </div>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
